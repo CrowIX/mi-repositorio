@@ -1,0 +1,24 @@
+body{
+    margin:0
+}
+
+.grid {
+    background-color: yellow;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100px 100px 100px 100px;
+    grid-auto-rows: 100px;
+    grid-row-gap: 10px;
+    grid-column-gap: 20px;
+    /* grid-gap: 10px 10px; */
+}
+
+.grid > p {
+    background-color: orange;
+    margin: 0;
+    border: solid 1px black;
+}
+.grid >p:nth-child(1){
+    grid-column: 1;
+    grid-row: 2;
+}

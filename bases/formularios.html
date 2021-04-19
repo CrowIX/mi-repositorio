@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Formularios de html.</title>
+        <link rel="stylesheet" href="formularios.css">
+    </head>
+    <body>
+        <form method="GET" class="Formulario"> 
+            <fieldset>
+                <legend>Datos principales</legend>
+                <input type="hidden" name="user-id" value="123">
+            <label for="ingresarNombre">Pon aqui tu nombre.</label>
+            <input id="ingresaNombre"type="text" name="Nombre" maxlength="10" minlength="6" value="ejemplo" list="campo-nombre" autocomplete="off" class="input">
+            
+            <datalist id="campo-nombre" >
+                <option>Pepito</option>
+            </datalist>
+            <br>
+            <label>
+                <input checked type="checkbox" name="aceptar" id="" value="accepted"> Acepto los terminos de privacidad.
+            </label>
+            <br>
+            </fieldset>
+            
+            <label>
+                <input type="radio" name="gender" id="" value="Hombre"> Hombre
+                <input type="radio" name="gender" id="" value="Mujer"> Mujer
+            </label>
+            <br>
+            <label>
+                <input type="number" min="0"  max="110" name="age" id=""> Edad.
+            </label>
+            <br>
+            <label>
+                <input type="password" name="pass" id="" required> contrasena
+            </label>
+            <br>
+            <label>
+                <input type="range" name="range" id=""> Rango
+            </label>
+            <br>
+            <label>
+                <input type="datetime-local" name="cumpleanos" id="">cumpleanos
+            </label>
+            <br>
+            <label>
+                Comentario
+                <textarea name="Comentario"></textarea>
+            </label>
+            <br>
+            <label>
+                Color favorito
+                <select name="color-favorito" id="" class="input">
+                    <optgroup label="Colores primarios">
+                        <option value="red">Rojo</option>
+                        <option value="green">Verde</option>
+                        <option value="blue">Azul</option>
+                    </optgroup>
+                    <optgroup label="Otros colores">
+                        <option value="yellow">Amarillo</option>
+                    </optgroup>
+                </select>
+            </label>
+            <br>
+            <button type="submit" class="button">Enviar</button>
+            <button type="reset" class="button">Resetear</button>
+            <button type="button" class="button">Click</button>
+        </form>
+    </body>
+</html>

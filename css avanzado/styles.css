@@ -1,0 +1,25 @@
+.hola {
+    background-color: yellow ;
+}
+
+.adios {
+    background-color: blue ;
+}
+
+/* selector para un atributo especifico  tag[atributo]*/
+a[href="http://google.com"]{
+    border: solid 2px
+}
+
+/*  usando los operadores: empieza por (^), termina por ($), contiene
+ (*) para seleccionar  elementos dentro de selectores, ejemplo.
+a[href^="http://" {}
+a[href$=".pdf" {}
+a[href*="google" {}
+ */
+
+/* el pseudoselector es una forma de seleccionar cosas dentro de un tag usando (:) */
+
+li:nth-child(odd) {
+    background: coral;
+}
