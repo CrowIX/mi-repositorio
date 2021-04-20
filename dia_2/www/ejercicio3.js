@@ -1,15 +1,16 @@
+'use strict';
 // suma 1, resta 2, multiplicacion 3, potenciacion 4, division 5
 
-let val1 = 1;
-let val2 = 2;
+let val1;
+let val2;
 let option = 5;
 
 if (val1 === undefined && val2 === undefined) {
-  console.log('No se ha ingresado ninguno de los valores.');
+  throw new Error('No se ha ingresado ninguno de los valores.');
 } else if (val1 === undefined) {
-  console.log('No se ha ingresado el primer valor.');
+  throw new Error('No se ha ingresado el primer valor.');
 } else if (val2 === undefined) {
-  console.log('No se ha ingresado el segundo valor.');
+  throw new Error('No se ha ingresado el segundo valor.');
 } else {
   if (option === 1) {
     console.log('La suma de los valores es:', val1 + val2);
@@ -21,17 +22,17 @@ if (val1 === undefined && val2 === undefined) {
     console.log('La potenciación de los valores es:', val1 ** val2);
   } else if (option === 5) {
     if (val1 === 0 && val2 === 0) {
-      console.log('No es posible dividir entre 0');
+      throw new Error('No es posible dividir entre 0');
     } else if (val1 === 0) {
       console.log(0);
     } else if (val2 === 0) {
-      console.log('No es posible dividir entre 0');
+      throw new Error('No es posible dividir entre 0');
     } else {
       console.log('La división de los valores es:', val1 / val2);
     }
   } else if (option > 5 || option < 1) {
-    console.log('No ha elegido una opcion correcta');
+    throw new Error('No ha elegido una opcion correcta');
   } else {
-    console.log('No ha elegido ninguna opcion');
+    throw new Error('No ha elegido ninguna opcion');
   }
 }

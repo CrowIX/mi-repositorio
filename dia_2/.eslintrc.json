@@ -1,4 +1,4 @@
-
+{
     "env": {
         "browser": true,
         "es2021": true
@@ -10,7 +10,7 @@
     "rules": {
         "indent": [
             "error",
-            4,
+            2,
             {
                 "SwitchCase": 1
             }
