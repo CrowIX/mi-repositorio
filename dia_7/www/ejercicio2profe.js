@@ -24,24 +24,21 @@
 
 'use strict';
 
-const myString = 'Hola que tal';
+const text = 'Hola (que tal';
 
-const myString2 = myString;
+function formatString(string) {
+  const leftPar = string.indexOf('(');
+  const rightPar = string.indexOf(')');
 
-/////////////////////////////////
-//TODO Detector de un parentesis
-
-function detector(value) {
-  if (value.includes('(') && value.includes(')')) {
-    let par1 = value.indexOf('(');
-    let par2 = value.indexOf(')');
-    const myString2 = myString.slice(par1 + 1, par2);
-    return myString2;
-  } else if (value.localCompare('(') === 0) {
+  if (leftPar >= 0 && rightPar >= 0) {
+    return string.slice(leftPar + 1, rightPar);
+  } else if (leftPar >= 0 && rightPar === -1) {
+    return string.slice(leftPar + 1);
+  } else if (leftPar === -1 && rightPar >= 0) {
+    return string.slice(0, rightPar);
+  } else {
     return '';
   }
 }
 
-//console.log(detector(myString));
-
-console.log(detector());
+console.log(formatString(text));
