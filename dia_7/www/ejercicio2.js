@@ -26,22 +26,20 @@
 
 const myString = 'Hola que tal';
 
-const myString2 = myString;
-
 /////////////////////////////////
-//TODO Detector de un parentesis
 
-function detector(value) {
-  if (value.includes('(') && value.includes(')')) {
-    let par1 = value.indexOf('(');
-    let par2 = value.indexOf(')');
-    const myString2 = myString.slice(par1 + 1, par2);
-    return myString2;
-  } else if (value.localCompare('(') === 0) {
+function detector(string) {
+  const par1 = string.indexOf('(');
+  const par2 = string.indexOf(')');
+  if (par1 >= 0 && par2 >= 0) {
+    return string.slice(par1 + 1, par2);
+  } else if (par1 >= 0 && par2 === -1) {
+    return string.slice(par1 + 1);
+  } else if (par1 === -1 && par2 >= 0) {
+    return string.slice(0, par2);
+  } else {
     return '';
   }
 }
 
-//console.log(detector(myString));
-
-console.log(detector());
+console.log(detector(myString));
