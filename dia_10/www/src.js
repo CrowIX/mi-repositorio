@@ -1,4 +1,5 @@
 'use strict';
+//metodos con callbacks
 
 // Metodo sort()
 
@@ -41,7 +42,7 @@ const itemList = clothes.map((cloth, index) => {
 
 console.log(itemList);
 
-//filter() nos permite filtrar elementos de un array y nos devuelve un array con la longitud de los elementos que cumplan la condicion que le pasemos.
+//metodo filter() nos permite filtrar elementos de un array y nos devuelve un array con la longitud de los elementos que cumplan la condicion que le pasemos.
 
 const prices2 = [15, 13, 5, 20, 2, 7, 9];
 
@@ -86,3 +87,40 @@ const result2 = over5.map((value) => value.price);
 console.log(over5);
 console.log('#####################################');
 console.log(result2);
+
+//metodo reduce()
+
+const numbers3 = [3, 2, 5, 10];
+
+const totals = numbers3.reduce((acc, num, i) => {
+  console.log(`${acc} += ${num}`);
+
+  acc += num;
+
+  console.log(`Index ${i}. Acc =`, acc);
+  console.log('====================================');
+  return acc;
+}, 0);
+// acc = acumulador, num = valores dentro del array, i = indice de los elementos dentro del array
+
+console.log(totals);
+
+//metodo some() funciona para encontrar un valor. Y retorna un valor booleano.
+
+const fruitBasket = [
+  'naranja',
+  'naranja',
+  'limón',
+  'pera',
+  'limón',
+  'plátano',
+  'naranja',
+];
+
+const result3 = fruitBasket.some((fruit) => fruit === 'sandia');
+
+console.log(result3);
+
+//metodo every() para encontrar todos los valores.
+
+//metodo find() encuentra un unico elemento. O el primer elemento que cumpla condiciones.
