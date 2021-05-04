@@ -20,9 +20,9 @@ const array2 = [5, 10, 10, 6, 5];
 const array3 = [0, 1, 2, 3, 4, 5];
 
 function simpleMode(numsArray) {
-  let kept = 0;
+  let kept = null;
   for (let i = 0; i < numsArray.length; i++) {
-    for (let j = 0; j < array.length; j++) {
+    for (let j = i + 1; j < numsArray.length; j++) {
       if (i === j) {
         kept = kept;
       }
