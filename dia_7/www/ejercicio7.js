@@ -41,3 +41,11 @@ let data = `  "id", "m2", "antigüedad", "habitaciones", "baños", "amueblado", 
   148, 160, 9,  5, 3, true,  true
   149, 60, 11,  1, 1, false,  true
      `;
+data = data.trim().split('\n');
+data.shift();
+
+for (let i = 0; i < data.length; i++) {
+  data[i] = data[i].replaceAll(' ', '').split(',');
+}
+
+console.log(data);

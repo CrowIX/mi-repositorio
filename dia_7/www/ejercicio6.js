@@ -20,7 +20,7 @@
 
 let text = '¡Lorem Ipsum Dolor Sit Amet, Consectetur Elit Adipisicing!';
 
-const regex = /[^A-Za-z ]/g;
+const regex = /[^A-Za-z ]/g; //expresion regular
 
 text = text.replace(regex, '').toLowerCase().split(' ').sort();
 
